@@ -1,0 +1,302 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    background-image: url(../images/background.jpg);
+}
+/* ============================= SEARCh background ===========================
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+/* Remove margins and padding from the list */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#myUL li {
+  cursor: pointer;
+  height: inherit;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  width: 40%;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#myUL li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#myUL li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Remove margins and padding from the list */
+#myUL2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#myUL2 li {
+  cursor: pointer;
+  height: inherit;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  width: 40%;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL2 li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#myUL2 li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#myUL2 li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL2 li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.ToDoContainer {
+  background-color: #6600cc;
+  padding: 5% 4%;
+  color: white;
+  text-align: center;
+  width: 90%;
+  border-radius: 8px;
+}
+
+/* Clear floats after the header */
+.ToDoContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the header */
+.DailiesContainer {
+  background-color: #6600cc;
+  padding: 5% 4%;
+  color: white;
+  text-align: center;
+  width: 90%;
+  border-radius: 8px;
+}
+
+/* Clear floats after the header */
+.DailiesContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+#myInput {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 65%;
+  padding: 2%;
+  float: left;
+  font-size: 16px;
+}
+#myInput2 {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 65%;
+  padding: 2%;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 2%;
+  width: 15%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+/* Style the "Add" button */
+.addBtn2 {
+  padding: 2%;
+  width: 15%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 0;
+}
+
+.addBtn2:hover {
+  background-color: #bbb;
+}
+/* ================================ COLUMN ==================================*/
+.column {
+  float: left;
+  width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*================================= SEARCH ==================================*/
+#searchInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 30%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  border-radius: 8px;
+  margin-bottom: 12px; /* Add some space below the input */
+}

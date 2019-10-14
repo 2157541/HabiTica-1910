@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Habit List</title>
+    <link rel="stylesheet" href="style/style.css">
+
+  </head>
+
+  <body>
+      <div class="topnav">
+          <a class="active" href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search..">
+
+          <script type="text/javascript">
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+        </script>
+      </div>
+
+      <div class="row">
+          <div class="column">
+            <div class="ToDoContainer">
+              <h2>Habits</h2>
+              <input type="text" id="myInput" placeholder="Add a Habit...">
+              <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+
+            <ul id="myUL">
+              <li id="habits">
+                <a href="#"><script src="js/javascript.js"></script></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <div class="DailiesContainer">
+              <h2>Habits</h2>
+              <input type="text" id="myInput2" placeholder="Add a Habit...">
+              <span onclick="newElement()" class="addBtn2">Add</span>
+            </div>
+
+            <ul id="myUL2">
+              <li id="daily">
+                <a href="#"><script src="js/javascript.js"></script></a>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+        <div class="column">
+        </div>
+
+      </div>
+
+
+  </body>
+</html>
