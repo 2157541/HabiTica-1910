@@ -12,6 +12,20 @@ html, body{
     background-image: url(../images/background.jpg);
 }
 
+/* ============================= responsive bg ================= */
+.bg{
+    /* The image used */
+  background-image: url("../images/background.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* ============================= HEALTH BAR ================= */
 #healthbar {
   margin-left: 5%;
