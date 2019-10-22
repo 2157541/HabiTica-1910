@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 html, body{
     width: 100%;
@@ -10,58 +9,9 @@ html, body{
     font-size: 13px;
     font-family: Karla, sans-serif;
     font-weight: normal;
+    background-image: url(../images/background.jpg);
 }
-
-/* ============================= responsive bg ================= */
-.bg{
-    /* The image used */
-  background-image: url("../images/background.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* ============================= HEALTH BAR ================= */
-#healthbar {
-  margin-left: 5%;
-}
-
-#myProgress {
-  width: 20%;
-  background-color: #ddd;
-}
-
-#myBar {
-  width: 10%;
-  height: 20px;
-  background-color: #ff3333;
-}
-
-/* ================================ COLUMN ==================================*/
-.column {
-  width: 10%;
-  float: left;
-  margin-left: 1%;
-}
-.column2 {
-  width: 60%;
-  float: left;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ============================= SEARCh background ===========================
-
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
@@ -98,7 +48,6 @@ html, body{
   border: none;
   margin-top: 8px;
   margin-right: 16px;
-  border: none;
   font-size: 17px;
 }
 
@@ -132,7 +81,7 @@ html, body{
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-  width: 39.5%;
+  width: 40%;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -172,6 +121,61 @@ html, body{
   width: 7px;
 }
 
+/* Remove margins and padding from the list */
+#myUL2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#myUL2 li {
+  cursor: pointer;
+  height: inherit;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  width: 40%;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL2 li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#myUL2 li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#myUL2 li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL2 li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
 /* Style the close button */
 .close {
   position: absolute;
@@ -191,7 +195,7 @@ html, body{
   padding: 5% 4%;
   color: white;
   text-align: center;
-  width: 35%;
+  width: 90%;
   border-radius: 8px;
 }
 
@@ -201,9 +205,34 @@ html, body{
   display: table;
   clear: both;
 }
+/* Style the header */
+.DailiesContainer {
+  background-color: #6600cc;
+  padding: 5% 4%;
+  color: white;
+  text-align: center;
+  width: 90%;
+  border-radius: 8px;
+}
+
+/* Clear floats after the header */
+.DailiesContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* Style the input */
 #myInput {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 65%;
+  padding: 2%;
+  float: left;
+  font-size: 16px;
+}
+#myInput2 {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -229,6 +258,35 @@ html, body{
 
 .addBtn:hover {
   background-color: #bbb;
+}
+/* Style the "Add" button */
+.addBtn2 {
+  padding: 2%;
+  width: 15%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 0;
+}
+
+.addBtn2:hover {
+  background-color: #bbb;
+}
+/* ================================ COLUMN ==================================*/
+.column {
+  float: left;
+  width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*================================= SEARCH ==================================*/

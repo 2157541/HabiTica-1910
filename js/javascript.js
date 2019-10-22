@@ -53,17 +53,3 @@ function newElement() {
     }
   }
 }
-
-
-
-
-var width = 10;
-function move() {
-      var elem = document.getElementById("myBar");
-        if (width < 100) {
-          width+=2;
-          elem.style.width = width + '%';
-          elem.innerHTML = width * 1 + '%';
-        }
-
-}
