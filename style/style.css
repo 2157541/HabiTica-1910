@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 html, body{
     width: 100%;
@@ -10,20 +9,7 @@ html, body{
     font-size: 13px;
     font-family: Karla, sans-serif;
     font-weight: normal;
-}
-
-/* ============================= responsive bg ================= */
-.bg{
-    /* The image used */
-  background-image: url("../images/background.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url(../images/background.jpg);
 }
 
 /* ============================= HEALTH BAR ================= */
@@ -98,7 +84,6 @@ html, body{
   border: none;
   margin-top: 8px;
   margin-right: 16px;
-  border: none;
   font-size: 17px;
 }
 
@@ -245,8 +230,3 @@ html, body{
   margin-bottom: 12px; /* Add some space below the input */
 }
 
- /*.responsive {
-  background-size: contain;
-  width: 100%;
-  height: 270px;
-} 
