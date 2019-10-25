@@ -178,8 +178,6 @@ html, body{
   text-align: center;
   width: 35%;
   border-radius: 8px;
-  max-width: none;
-  margin: 0 150px;
 }
 
 /* Clear floats after the header */
@@ -230,3 +228,88 @@ html, body{
   margin-bottom: 12px; /* Add some space below the input */
 }
 
+/*========================= About Page ==============*/
+
+.firstbox {
+  background-color: #DCDCDC;
+  width: 600px;
+  border: 20px ;
+  padding: 50px;
+  margin: auto;
+  border-style: solid;
+  border-color: #9932CC;
+  
+}
+
+hr.new1 {
+  border-top: 3px solid black;
+}
+ 
+ p {
+  font-family: "Courier New", Lucida Console;
+}
+
+h1 {
+  font-family: "Courier New", Lucida Console;
+}
+
+.secondbox {
+  background-color: #DCDCDC;
+  width: 600px;
+  border: 20px ;
+  padding: 50px;
+  margin: auto;
+  border-style: solid;
+  border-color: #9932CC; 
+}
+
+h2 {
+  font-family: "Courier New", Lucida Console;
+} 
+
+.accordion {
+		    background-color: #C933FF;
+		    color: #FFF;
+		    cursor: pointer;
+		    padding: 18px;
+		    width: 100%;
+		    text-align: left;
+		    border: 1px solid white;
+		    outline: none;
+		    transition: 0.4s;
+		    font: 20px Lato, sans-serif;
+		}
+
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		.active, .accordion:hover {
+		    background-color: #A333FF;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		.panel {
+		    padding: 0 18px;
+		    background-color: white;
+		    max-height: 0;
+		    overflow: hidden;
+		    transition: max-height 0.2s ease-out;
+		}
+
+		p{
+			font-family: "Courier New", Lucida Console;
+		}
+
+		.accordion:after {
+		    content: '\02795'; /* Unicode character for "plus" sign (+) */
+		    font-size: 13px;
+		    float: right;
+		    margin-left: 5px;
+		}
+/*
+		.active:after {
+		    content: "\2796"; /* Unicode character for "minus" sign (-) 
+		} */
+
+h1.intro {
+  color: white;
+  text-align: center;
+}
