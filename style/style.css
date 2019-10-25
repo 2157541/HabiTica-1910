@@ -178,6 +178,8 @@ html, body{
   text-align: center;
   width: 35%;
   border-radius: 8px;
+  max-width: none;
+  margin: 0 150px;
 }
 
 /* Clear floats after the header */
@@ -228,41 +230,3 @@ html, body{
   margin-bottom: 12px; /* Add some space below the input */
 }
 
-/*========================= About Page ==============*/
-
-.firstbox {
-  background-color: #DCDCDC;
-  width: 600px;
-  border: 20px ;
-  padding: 50px;
-  margin: auto;
-  border-style: solid;
-  border-color: #9932CC;
-  
-}
-
-hr.new1 {
-  border-top: 3px solid black;
-}
- 
- p {
-  font-family: "Courier New", Lucida Console;
-}
-
-h1 {
-  font-family: "Courier New", Lucida Console;
-}
-
-.secondbox {
-  background-color: #DCDCDC;
-  width: 600px;
-  border: 20px ;
-  padding: 50px;
-  margin: auto;
-  border-style: solid;
-  border-color: #9932CC; 
-}
-
-h2 {
-  font-family: "Courier New", Lucida Console;
-}
