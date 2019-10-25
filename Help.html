@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HELP</title>
+	<meta charset="utf-8">
+
+	<!-- To ensure proper rendering and touch zooming in Mobile Phones -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		/* Style the buttons that are used to open and close the accordion panel */
+		.accordion {
+		    background-color: #C933FF;
+		    color: #FFF;
+		    cursor: pointer;
+		    padding: 18px;
+		    width: 100%;
+		    text-align: left;
+		    border: 1px solid white;
+		    outline: none;
+		    transition: 0.4s;
+		    font: 20px Lato, sans-serif;
+		}
+
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		.active, .accordion:hover {
+		    background-color: #A333FF;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		.panel {
+		    padding: 0 18px;
+		    background-color: white;
+		    max-height: 0;
+		    overflow: hidden;
+		    transition: max-height 0.2s ease-out;
+		}
+
+		p{
+			font: 16px Lato, sans-serif; 
+		}
+
+		.accordion:after {
+		    content: '\02795'; /* Unicode character for "plus" sign (+) */
+		    font-size: 13px;
+		    float: right;
+		    margin-left: 5px;
+		}
+
+		.active:after {
+		    content: "\2796"; /* Unicode character for "minus" sign (-) */
+		}
+	</style>
+</head>
+<body>
+	<h1>Frequently Asked Questions</h1>
+		<button class="accordion">I'm confused. Where do I get an overview?</button>
+	<div class="panel">
+	<p>
+First, you'll set up tasks that you want to do in your everyday life. 
+Then, as you complete the tasks in real life and check them off, you'll earn Experience and Gold. 
+Gold is used to buy equipment and some items, as well as custom rewards. 
+Experience causes your character to level up and unlock content such as pets, skills, and quests!
+	</p></div>
+	
+	<button class="accordion">How do I set up my tasks?</button>
+	<div class="panel">
+	<p>
+Good Habits (the ones with a heavy_plus_sign) are tasks that you can do many times a day, such as eating vegetables. 
+Bad Habits (the ones with a heavy_minus_sign) are tasks that you should avoid, like biting nails. 
+Habits with a heavy_plus_sign and a heavy_minus_sign have a good choice and a bad choice, like taking the stairs vs. 
+taking the elevator. Good Habits award Experience and Gold. Bad Habits subtract Health.
+Dailies are tasks that you have to do every day, like brushing your teeth or checking your email. 
+You can adjust the days that a Daily is due by clicking the pencil item to edit it.
+ If you skip a Daily that is due, your avatar will take damage overnight. Be careful not to add too many Dailies at once!
+To-Dos are your To-Do list. Completing a To-Do earns you Gold and Experience. 
+You never lose Health from To-Dos. You can add a due date to a To-Do by clicking the pencil icon to edit.
+	</p></div>
+	
+		<button class="accordion">Why do my tasks change color?</button>
+	<div class="panel">
+	<p>
+Your tasks change color based on how well you are currently accomplishing them! Each new task starts out as a neutral yellow. 
+Perform Dailies or positive Habits more frequently and they move toward blue. 
+Miss a Daily or give in to a bad Habit and the task moves toward red. The redder a task, 
+the more rewards it will give you, but if it’s a Daily or bad Habit, the more it will hurt you! 
+This helps motivate you to complete the tasks that are giving you trouble.
+	</p></div>
+	
+		<button class="accordion">Why did my avatar lose health, and how do I regain it?</button>
+	<div class="panel">
+	<p>
+There are several things that can cause you to take damage. 
+First, if you left Dailies incomplete overnight and didn't check them off in the screen that popped up the next morning, those unfinished Dailies will damage you. 
+Second, if you click a bad Habit, it will damage you. 
+Finally, if you are in a Boss Battle with your party and one of your party mates did not complete all their Dailies, 
+the Boss will attack you. The main way to heal is to gain a level, which restores all your Health. 
+You can also buy a Health Potion with Gold from the Rewards column. 
+Plus, at level 10 or above, you can choose to become a Healer, and then you will learn healing skills. 
+Other Healers can heal you as well if you are in a Party with them. Learn more by clicking "Party" in the navigation bar.
+	</p></div>
+
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight){
+		      panel.style.maxHeight = null;
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    } 
+		  });
+		}
+</script>
+	</script>
+</body>
+</html>
