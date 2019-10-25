@@ -6,7 +6,9 @@
 
 	<!-- To ensure proper rendering and touch zooming in Mobile Phones -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/style.css">
 
+<!--
 	<style>
 		/* Style the buttons that are used to open and close the accordion panel */
 		.accordion {
@@ -46,14 +48,23 @@
 		    float: right;
 		    margin-left: 5px;
 		}
-
+/*
 		.active:after {
 		    content: "\2796"; /* Unicode character for "minus" sign (-) */
-		}
+		} */
+
+
 	</style>
+-->
 </head>
 <body>
-	<h1>Frequently Asked Questions</h1>
+	  <div class="topnav">
+          <a  href="index.html">Home</a>
+          <a  href="about.html">About</a>
+          <a class="active" href="Help.html">Help</a>
+  </div>
+  
+	<h1 class="intro"> Frequently Asked Questions </h1>
 		<button class="accordion">I'm confused. Where do I get an overview?</button>
 	<div class="panel">
 	<p>
@@ -89,7 +100,8 @@ This helps motivate you to complete the tasks that are giving you trouble.
 	
 		<button class="accordion">Why did my avatar lose health, and how do I regain it?</button>
 	<div class="panel">
-	<p>
+		<br>
+
 There are several things that can cause you to take damage. 
 First, if you left Dailies incomplete overnight and didn't check them off in the screen that popped up the next morning, those unfinished Dailies will damage you. 
 Second, if you click a bad Habit, it will damage you. 
@@ -98,6 +110,7 @@ the Boss will attack you. The main way to heal is to gain a level, which restore
 You can also buy a Health Potion with Gold from the Rewards column. 
 Plus, at level 10 or above, you can choose to become a Healer, and then you will learn healing skills. 
 Other Healers can heal you as well if you are in a Party with them. Learn more by clicking "Party" in the navigation bar.
+
 	</p></div>
 
 	<script type="text/javascript">
