@@ -2,19 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Habit List</title>
+    <title>Habitica</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
 
   <body>
-     <div class="topnav">
-          <a class="active" href="index.html">Home</a>
-          <a  href="about.html">About</a>
-          <a href="Help.html">Help</a>
-          <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search..">
-      </div>
+    <div class="bg">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="Help.html">Help</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
 
 <!-- ============ AVATAR & HEALTH BAR ================= -->
   <div class="row">
@@ -51,5 +56,10 @@
               </li>
             </ul>
     </div>        
+
+    <div class="footer">
+        <p>Habitica© 2019</p>
+    </div>
+
   </body>
 </html>
