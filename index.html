@@ -13,41 +13,41 @@
           <a  href="about.html">About</a>
           <a href="Help.html">Help</a>
           <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search..">
-
-          <script type="text/javascript">
-              function myFunction() {
-                  // Declare variables
-                  var input, filter, ul, li, a, i, txtValue;
-                  input = document.getElementById('myInput');
-                  filter = input.value.toUpperCase();
-                  ul = document.getElementById("myUL");
-                  li = ul.getElementsByTagName('li');
-
-                  // Loop through all list items, and hide those who don't match the search query
-                  for (i = 0; i < li.length; i++) {
-                      a = li[i].getElementsByTagName("a")[0];
-                      txtValue = a.textContent || a.innerText;
-                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                          li[i].style.display = "";
-                      } else {
-                          li[i].style.display = "none";
-                      }
-                  }
-              }
-        </script>
       </div>
 
+<!-- ============ AVATAR & HEALTH BAR ================= -->
+  <div class="row">
+    <div class="column">
+          <img id="avatar" src="images/avatar.png" alt="Avatar">
+    </div>
+
+    <div class="column2">
+      <div id="healthbar">
+          <h1 id="name">Jon Snow</h1>
+          <p id="email">@kingofthenorth</p>
+          <br>
+          <p id="text"><img src="images/health.png" id="heart" alt="Avatar"> HEALTH</p>
+          <div id="myProgress">
+              <div id="myBar"></div>
+          </div>
+          <br>
+      </div>
+    </div>
+  </div>
+
+<!-- ============ TO DO LIST ================= -->
             <div class="ToDoContainer">
-              <h2>Habits</h2>
+              <h2 id="habits">Habits</h2>
               <input type="text" id="myInput" placeholder="Add a Habit...">
               <span onclick="newElement()" class="addBtn">Add</span>
             </div>
 
-            <ul id="myUL">
+            <!-- add new list and increase healthbar when clicked -->
+            <ul id="myUL" onclick="move()">
               <li id="habits">
                 <a href="#"><script src="js/javascript.js"></script></a>
               </li>
             </ul>
-          </div>
+
   </body>
 </html>
