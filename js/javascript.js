@@ -76,7 +76,6 @@ function newElement() {
           }
   }
 
-
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -86,11 +85,7 @@ function myFunction() {
   }
 }
 
-
-
-
-
-
+// ========================================= SEARCH BOX================================
 
 document.addEventListener( 'DOMContentLoaded',function(){
  var searchpara=document.getElementById("paragraph").innerHTML;
@@ -99,13 +94,12 @@ document.addEventListener( 'DOMContentLoaded',function(){
  {highlight_word(searchpara)};
 },false);
 
-function highlight_word(searchpara)
-{
- var text=document.getElementById("search_text").value;
- if(text)
- {
-  var pattern=new RegExp("("+text+")", "gi");
-  var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
-  document.getElementById("paragraph").innerHTML=new_text;
- }
+function highlight_word(searchpara) {
+  var text=document.getElementById("search_text").value;
+
+   if (text) {
+      var pattern=new RegExp("("+text+")", "gi");
+      var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+      document.getElementById("paragraph").innerHTML=new_text;
+   }
 }

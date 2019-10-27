@@ -5,8 +5,10 @@
     <title>Habitica</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet"/>
+    <script defer src="script.js"></script>
   </head>
 
   <body>
@@ -26,6 +28,7 @@
             </a>
         </div>
     </div>
+<script src="js/javascript.js"></script>
 
 <!-- ============ AVATAR & HEALTH BAR ================= -->
   <div class="row">
@@ -45,9 +48,10 @@
           <br>
       </div>
     </div>
+
   </div>
 
-<!-- ============ TO DO LIST ================= -->
+<!-- ============ TO DO LIST
     <div class="ToDo">
             <div class="ToDoContainer">
               <h2 id="habits">Habits</h2>
@@ -55,7 +59,7 @@
               <span onclick="newElement()" class="addBtn">Add</span>
             </div>
 
-            <!-- add new list and increase healthbar when clicked -->
+            <!-- add new list and increase healthbar when clicked
             <ul id="myUL" onclick="move()">
               <li id="habits">
                   <a href="#">
@@ -65,12 +69,61 @@
             </ul>
     </div>
 
-    <p id="paragraph">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
+================= -->
+<div class="rowow">
+  <div class="columnar">
+    <div class="all-tasks">
+      <h2 class="task-list-title">Habits</h2>
+      <ul class="task-list" data-lists></ul>
 
+      <form action="" data-new-list-form>
+        <input type="text" class="new list" data-new-list-input placeholder="To Do List" aria-label="new list name"/>
+        <button class="btn create" aria-label="create new list">+</button>
+      </form>
+    </div>
+    <br>
+  </div>
+
+  <div class="columnar2">
+    <div class="todo-list" data-list-display-container>
+          <div class="todo-header">
+              <h2 class="list-title" data-list-title>School</h2>
+              <p class="task-count" data-list-count>3 tasks remaining</p>
+          </div>
+
+      <div class="todo-body">
+        <div class="tasks" data-tasks></div>
+
+        <div class="new-task-creator">
+            <form action="" data-new-task-form>
+                <input type="text" data-new-task-input class="new task" placeholder="Add task" aria-label="new task name"/>
+                <button class="btn create" aria-label="create new task">+</button>
+              </form>
+        </div>
+
+
+        <div class="delete-stuff">
+              <button class="btn delete" onclick="move()" data-clear-complete-tasks-button>Clear completed tasks</button>
+              <script src="js/javascript.js"></script>
+              <button class="btn delete" data-delete-list-button>Delete list</button>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
 
     <div class="footer">
-        <p>Habitica© 2019</p>
-    </div>
-
+          <p>Habitica© 2019</p>
+      </div>
   </body>
 </html>
