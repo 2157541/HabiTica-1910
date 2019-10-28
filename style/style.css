@@ -4,7 +4,7 @@
   padding: 0;
 }
 html, body{
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     font-size: 13px;
     font-family: Karla, sans-serif;
@@ -106,6 +106,7 @@ html, body{
 .topnav {
   overflow: hidden;
   background-color: #ccc;
+  width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -189,8 +190,12 @@ hr.new1 {
   font-family: "Courier New", Lucida Console;
 }
 */
-h1 {
+#title {
   font-family: "Courier New", Lucida Console;
+  font-size: 2vw;
+}
+#title2 {
+  font-size: 1.5vw;
 }
 
 .secondbox {
@@ -256,12 +261,8 @@ h2 {
 		  text-align: center;
 		}
 
-
 /* ========================= Footer ======================*/
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -270,14 +271,6 @@ h2 {
   text-align: center;
 }
 
-.viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
-
-.-ms-viewport {
-  width: device-width ;
-}
 /* ================================SEARCHBAR===========================*/
 #search_para {
  color:grey;
@@ -317,6 +310,8 @@ h2 {
   width: 50%;
   padding-left: 4%;
   opacity: 0.5;
+  border-radius: 10px;
+  padding-bottom: 2%;
 }
 
 .task-list {
@@ -367,6 +362,20 @@ form {
 }
 
 .btn.delete:hover {
+  color: #7300e6;
+}
+
+.undone {
+  opacity: 0.7;
+  font-size: 1.5vw;
+  transition: color 200ms;
+  color: black;
+  background-color: #ccccff;
+  padding: 2% 2% 2% 2%;
+  border-radius: 5px;
+}
+
+.undone:hover {
   color: #7300e6;
 }
 

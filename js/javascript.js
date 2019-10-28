@@ -76,6 +76,16 @@ function newElement() {
           }
   }
 
+  var widtha = 10;
+  function move1() {
+        var elema = document.getElementById("myBar");
+          if (widtha < 100) {
+            widtha-=2;
+            elema.style.width = widtha + '%';
+            elema.innerHTML = widtha * 1 + '%';
+          }
+  }
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {

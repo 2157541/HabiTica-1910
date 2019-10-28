@@ -3,13 +3,31 @@
 <head>
 	<title>Habitica - Help</title>
 	<meta charset="utf-8">
-	<!-- To ensure proper rendering and touch zooming in Mobile Phones -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/style.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+
+	<script type="text/javascript">
+				document.addEventListener( 'DOMContentLoaded',function(){
+				 var searchpara=document.getElementById("paragraph").innerHTML;
+				 searchpara=searchpara.toString();
+				 document.getElementById("search").onclick =function ()
+				 {highlight_word(searchpara)};
+				},false);
+
+				function highlight_word(searchpara) {
+					var text=document.getElementById("search_text").value;
+
+					 if (text) {
+							var pattern=new RegExp("("+text+")", "gi");
+							var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+							document.getElementById("paragraph").innerHTML=new_text;
+					 }
+				}
+	</script>
 	<div class="bg">
 			<div class="topnav" id="myTopnav">
 					<a href="index.html" class="active">Home</a>
@@ -31,7 +49,7 @@
 		<button class="accordion">I'm confused. Where do I get an overview?</button>
 
 	<div class="panel">
-		<p>
+		<p id="paragraph">
 			First, you'll set up tasks that you want to do in your everyday life.
 			Then, as you complete the tasks in real life and check them off, you'll earn Experience and Gold.
 			Gold is used to buy equipment and some items, as well as custom rewards.
@@ -42,7 +60,7 @@
 	<button class="accordion">How do I set up my tasks?</button>
 
 	<div class="panel">
-		<p>
+		<p id="paragraph">
 			Good Habits (the ones with a heavy_plus_sign) are tasks that you can do many times a day, such as eating vegetables.
 			Bad Habits (the ones with a heavy_minus_sign) are tasks that you should avoid, like biting nails.
 			Habits with a heavy_plus_sign and a heavy_minus_sign have a good choice and a bad choice, like taking the stairs vs.
@@ -57,7 +75,7 @@
 
 		<button class="accordion">Why do my tasks change color?</button>
 	<div class="panel">
-		<p>
+		<p id="paragraph">
 			Your tasks change color based on how well you are currently accomplishing them! Each new task starts out as a neutral yellow.
 			Perform Dailies or positive Habits more frequently and they move toward blue.
 			Miss a Daily or give in to a bad Habit and the task moves toward red. The redder a task,
@@ -69,7 +87,7 @@
 		<button class="accordion">Why did my avatar lose health, and how do I regain it?</button>
 	<div class="panel">
 		<br>
-		<p>
+		<p id="paragraph">
 			There are several things that can cause you to take damage.
 			First, if you left Dailies incomplete overnight and didn't check them off in the screen that popped up the next morning, those unfinished Dailies will damage you.
 			Second, if you click a bad Habit, it will damage you.
@@ -79,6 +97,24 @@
 			Plus, at level 10 or above, you can choose to become a Healer, and then you will learn healing skills.
 			Other Healers can heal you as well if you are in a Party with them. Learn more by clicking "Party" in the navigation bar.
 		</p>
+	</div>
+
+	<button class="accordion">What are some sample tasks?</button>
+	<div class="panel">
+		<br>
+		<p id="paragraph">
+			The wiki has four lists of sample tasks to use as inspiration:
+		</p>
+		<ul>
+			<li>Sample Habits</li>
+			<li>Sample Dailies</li>
+			<li>Sample To-Dos</li>
+			<li>Sample Custom Reward</li>
+		</ul>
+	</div>
+
+	<div class="footer">
+				<p>Habitica© 2019</p>
 	</div>
 
 	<script type="text/javascript">
@@ -98,10 +134,6 @@
 		}
 </script>
 	</script>
-
-	<div class="footer">
-        <p>Habitica© 2019</p>
-    </div>
 
 </body>
 </html>
