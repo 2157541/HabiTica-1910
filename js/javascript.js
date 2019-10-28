@@ -66,7 +66,7 @@ function newElement() {
 }
 
   // ================================= HEALTH BAR ================== //
-  var width = 10;
+  var width = 50;
   function move() {
         var elem = document.getElementById("myBar");
           if (width < 100) {
@@ -76,11 +76,11 @@ function newElement() {
           }
   }
 
-  var widtha = 10;
+  var widtha = 55;
   function move1() {
         var elema = document.getElementById("myBar");
           if (widtha < 100) {
-            widtha-=2;
+            widtha-=5;
             elema.style.width = widtha + '%';
             elema.innerHTML = widtha * 1 + '%';
           }
