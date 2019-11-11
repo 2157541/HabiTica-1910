@@ -8,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet"/>
-    <script defer src="js/script.js"></script>
+    <script defer src="script.js"></script>
   </head>
 
   <body>
-<!-- ============ NAVIGATION BAR ================= -->
     <div class="bg">
         <div class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
@@ -51,7 +50,6 @@
 
   </div>
 
-<!-- ============ HABITS ================= -->
 <div class="rowow">
   <div class="columnar">
     <div class="all-tasks">
@@ -66,12 +64,11 @@
     <br>
   </div>
 
-<!-- ============ HABITS - TASKS ================= -->
   <div class="columnar2">
     <div class="todo-list" data-list-display-container>
           <div class="todo-header">
-              <h2 class="list-title" data-list-title></h2>
-              <p class="task-count" data-list-count></p>
+              <h2 class="list-title" data-list-title>School</h2>
+              <p class="task-count" data-list-count>3 tasks remaining</p>
           </div>
 
       <div class="todo-body">
@@ -84,7 +81,7 @@
               </form>
         </div>
 
-<!-- ============ DELETE BUTTON ================= -->
+
         <div class="delete-stuff">
               <button class="btn delete" onclick="move()" data-clear-complete-tasks-button>Clear completed tasks</button>
               <script src="js/javascript.js"></script>
@@ -106,46 +103,10 @@
       </div>
     </template>
 
-    <script>
-          // =============================== Service Worker =======================//
-          // Just to make sure sw are supported
-          if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-              navigator.serviceWorker
-                .register('sw_cached_pages.js')
-                .then(reg => console.log('Service Worker: Registered (Pages)'))
-                .catch(err => console.log(`Service Worker: Error: ${err}`));
-            });
-          }
-    </script>
 
   </body>
+
   <div class="footer">
         <p>Habitica© 2019</p>
   </div>
 </html>
-<!--
-if (window.indexedDB) {
-  var request = indexedDB.open("lists", 1);
-
-  request.onerror = function(e){
-    console.log(e);
-  }
-  request.onupgradeneeded = function(e){
-    var db = e.target.result;
-    var objectStore = db.createObjectStore("habits", {keyPath: "id"});
-    objectStore.createIndex("name", "name", {unique: false});
-    objectStore.transaction.oncomplete = function(e) {
-      var store = db.transaction(["habits"], "readwrite").objectStore("habits");
-
-      for (var i = 0; i < localStorage.length; i++) {
-        store.add(localStorage[i]);
-      }
-    }
-  }
-
-  request.onsuccess = function(e){
-    console.log("success");
-  }
-}
--->
