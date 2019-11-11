@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet"/>
-    <script defer src="script.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
+<!-- ============ NAVIGATION BAR ================= -->
     <div class="bg">
         <div class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
@@ -50,6 +51,7 @@
 
   </div>
 
+<!-- ============ HABITS ================= -->
 <div class="rowow">
   <div class="columnar">
     <div class="all-tasks">
@@ -64,11 +66,12 @@
     <br>
   </div>
 
+<!-- ============ HABITS - TASKS ================= -->
   <div class="columnar2">
     <div class="todo-list" data-list-display-container>
           <div class="todo-header">
-              <h2 class="list-title" data-list-title>School</h2>
-              <p class="task-count" data-list-count>3 tasks remaining</p>
+              <h2 class="list-title" data-list-title></h2>
+              <p class="task-count" data-list-count></p>
           </div>
 
       <div class="todo-body">
@@ -81,7 +84,7 @@
               </form>
         </div>
 
-
+<!-- ============ DELETE BUTTON ================= -->
         <div class="delete-stuff">
               <button class="btn delete" onclick="move()" data-clear-complete-tasks-button>Clear completed tasks</button>
               <script src="js/javascript.js"></script>
@@ -103,9 +106,11 @@
       </div>
     </template>
 
+    <script src="js/javascript.js"></script>
 
   </body>
 
+  <!-- ============ FOOTER ================= -->
   <div class="footer">
         <p>Habitica© 2019</p>
   </div>

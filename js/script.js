@@ -145,4 +145,30 @@ function clearElement(element) {
   }
 }
 
+
+// =============== DATABASE INDEXED-DB ========================//
+if (window.indexedDB) {
+  var request = indexedDB.open("lists", 1);
+
+  request.onerror = function(e){
+    console.log(e);
+  }
+  request.onupgradeneeded = function(e){
+    var db = e.target.result;
+    var objectStore = db.createObjectStore("habits", {keyPath: "id"});
+    objectStore.createIndex("tasks", "name", {unique: false});
+    objectStore.transaction.oncomplete = function(e) {
+      var store = db.transaction(["habits"], "readwrite").objectStore("habits");
+
+      for (var i = 0; i < lists.length; i++) {
+        store.add(lists[i]);
+      }
+    }
+  }
+
+  request.onsuccess = function(e){
+    console.log("success");
+  }
+}
+
 render()
